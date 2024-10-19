@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class Player : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Player : MonoBehaviour
     private float jumpRate = 1f;
     private float canJump = 0.3f;
     private Rigidbody2D rb;
-    private float jumpVelocity = 5f; //strength of jump
+    private float jumpVelocity = 7f; //strength of jump
 
     //private Rigidbody rb = GetComponent<Rigidbody>();
     private GameManager GM;
@@ -25,20 +26,21 @@ public class Player : MonoBehaviour
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
         SM = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
 
+
         //UI.UpdateLives(lives);
         SM.StartSpawn();
 
         //get rigidbody reference
         rb = transform.GetComponent<Rigidbody2D>();
         //teleport to center
-        transform.position = new Vector3(0, -5, 0);
+        //transform.position = new Vector3(0, -5, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        Bounds();
+        //Bounds();
 
         //jump code
         if (Input.GetKeyDown(KeyCode.Space) && (Time.time > canJump))
@@ -74,16 +76,6 @@ public class Player : MonoBehaviour
         if (transform.position.y < -3f) //lower bound
         {
             transform.position = new Vector3(transform.position.x, -3f, 0);
-        }
-
-        //left bound
-        if (transform.position.x < -9.5f)
-        {
-            transform.position = new Vector3(9.5f, transform.position.y, 0);
-        }
-        else if (transform.position.x > 9.5f) //right bound
-        {
-            transform.position = new Vector3(-9.5f, transform.position.y, 0);
         }
 
     } //closes bounds()

@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 //add player
-                Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
+                //Instantiate(Player, new Vector3(0, 0, 0), Quaternion.identity);
 
                 //start the game
                 gameOver = false;
