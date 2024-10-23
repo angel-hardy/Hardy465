@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Debug = UnityEngine.Debug;
+using System;
 
 public class Dialogue : MonoBehaviour
 {
@@ -60,5 +61,15 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void SetConvo(string[] sentences)
+    {
+        //for (int i = 0; i < sentences.Length; i++)
+        //{
+            //Debug.Log(sentences[i]);
+        //}
+        lines = sentences;
+        StartDialogue();
     }
 }

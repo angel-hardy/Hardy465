@@ -193,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 120325232}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.59, y: 10.76, z: 0}
+  m_LocalPosition: {x: 26.92, y: 10.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120325232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e074cd2f165fea40b897ce7bdd35bd0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f9c96a5c6c4b0c469e5ac42599db769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &167909382
@@ -461,7 +461,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.08, y: 11.38, z: -10}
+  m_LocalPosition: {x: -1.88, y: -3.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1766,11 +1766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1561637894088422608, guid: 5bd21372383a90c42bae7ad35a33f42a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.92
+      value: -2.29
       objectReference: {fileID: 0}
     - target: {fileID: 1561637894088422608, guid: 5bd21372383a90c42bae7ad35a33f42a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.14
+      value: -3.87
       objectReference: {fileID: 0}
     - target: {fileID: 1561637894088422608, guid: 5bd21372383a90c42bae7ad35a33f42a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2039,9 +2039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 597112005}
-  lines:
-  - Hey mom
-  - Love you
+  lines: []
   textSpeed: 0.05
 --- !u!1 &1545363990
 GameObject:

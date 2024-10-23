@@ -6,19 +6,20 @@ using Debug = UnityEngine.Debug;
 
 public class MoonDialogue : MonoBehaviour
 {
-    //private Dialogue DM;
+    private Dialogue DM;
+    private string[] sentences = new string[] {"testing once","testing twice"};
 
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Moon" + collision);  
-
-        //DM = GameObject.Find("DialogueBox").GetComponent<Dialogue>();
-
-        //if I run into something tagged as "player"
-        if (collision.gameObject.name == "Player")
+        if (collision.CompareTag("Player")) //if enemy runs into the laser
         {
-            Debug.Log("COLLIDE");
-            //DM.StartDialogue();
+            DM = GameObject.Find("DialogueBox").GetComponent<Dialogue>();
+            Player P = collision.GetComponent<Player>();
+            if (P != null)
+            {
+                //Debug.Log("GOT EM");
+                DM.SetConvo(sentences);
+            }
         }
     }
 }

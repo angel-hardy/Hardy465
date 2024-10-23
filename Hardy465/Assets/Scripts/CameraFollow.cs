@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         //try to make it so that when you're on the ground, the camera positions itself a little higher...
-        //if (target.position.y < -3f && target.position.y > -5f)
+        //if (collision.gameObject.name == "Ground")
         //{
         //focusShift = 2f;
         //onGround = true;
