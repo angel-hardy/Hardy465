@@ -7,7 +7,7 @@ using Debug = UnityEngine.Debug;
 public class MoonDialogue : MonoBehaviour
 {
     private Dialogue DM;
-    private string[] sentences = new string[] {"testing once","testing twice"};
+    private string[] sentences = new string[] {"Hi honey.","What are you doing all the way up here?", "I'm looking at the moon!", "I want to go there someday."};
 
     void OnTriggerEnter2D(Collider2D collision)
     {
