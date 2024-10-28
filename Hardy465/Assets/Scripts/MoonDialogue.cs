@@ -18,7 +18,7 @@ public class MoonDialogue : MonoBehaviour
             if (P != null)
             {
                 //Debug.Log("GOT EM");
-                DM.SetConvo(sentences);
+                DM.SetConvo(sentences, "MoonDialogue");
             }
         }
     }

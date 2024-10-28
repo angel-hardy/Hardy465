@@ -12,10 +12,15 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
     private int index;
 
+    public Boolean MoonDialogue = false;
+
+    private SceneManager SM;
+
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
+        SM = GameObject.Find("GameManager").GetComponent<SceneManager>();
         //StartDialogue();
     }
 
@@ -59,16 +64,23 @@ public class Dialogue : MonoBehaviour
             StartCoroutine(TypeLine());
         } else
         {
-            gameObject.SetActive(false);
+            textComponent.text = null;
+            //change the scene if the convo is over with
+            if (MoonDialogue == true)
+            {
+                SM.ChangeScene("Lvl2");
+                MoonDialogue = false;
+            }
         }
     }
 
-    public void SetConvo(string[] sentences)
+    public void SetConvo(string[] sentences, string dialogue)
     {
-        //for (int i = 0; i < sentences.Length; i++)
-        //{
-            //Debug.Log(sentences[i]);
-        //}
+        //create just a giant if else statement for specific dialogue
+        if (dialogue == "MoonDialogue")
+        {
+            MoonDialogue = true;
+        }
         lines = sentences;
         StartDialogue();
     }

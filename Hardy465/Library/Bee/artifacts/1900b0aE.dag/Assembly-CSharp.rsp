@@ -385,10 +385,13 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.1.19f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CollisionDetector.cs"
+"Assets/Scripts/CrossFade.cs"
 "Assets/Scripts/DialogueManager.cs"
+"Assets/Scripts/DialogueTrigger.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MoonDialogue.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/SceneManager.cs"
 "Assets/Scripts/SpawnManager.cs"
 "Assets/Scripts/UIManager.cs"
 -langversion:9.0

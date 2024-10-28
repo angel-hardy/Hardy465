@@ -17,18 +17,16 @@ public class Player : MonoBehaviour
     //private Rigidbody rb = GetComponent<Rigidbody>();
     private GameManager GM;
     private UIManager UI;
-    private SpawnManager SM;
 
     // Start is called before the first frame update
     void Start()
     {
         UI = GameObject.Find("Canvas").GetComponent<UIManager>();
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
-        SM = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
 
 
         //UI.UpdateLives(lives);
-        SM.StartSpawn();
+        //SM.StartSpawn();
 
         //get rigidbody reference
         rb = transform.GetComponent<Rigidbody2D>();
