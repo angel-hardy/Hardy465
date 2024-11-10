@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kitten_Test_0: -8422908129955749055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
