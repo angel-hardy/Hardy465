@@ -13,6 +13,9 @@ public class Dialogue : MonoBehaviour
     private int index;
 
     public Boolean MoonDialogue = false;
+    public Boolean GrassDialogue = false;
+    public Boolean TreeDialogue = false;
+    public Boolean GoodbyeDialogue = false;
 
     private SceneManager SM;
 
@@ -62,7 +65,8 @@ public class Dialogue : MonoBehaviour
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-        } else
+        }
+        else
         {
             textComponent.text = null;
             //change the scene if the convo is over with
@@ -70,6 +74,19 @@ public class Dialogue : MonoBehaviour
             {
                 SM.ChangeScene("Lvl2");
                 MoonDialogue = false;
+            }
+            else if (GrassDialogue == true)
+            {
+                SM.ChangeScene("Lvl3");
+                GrassDialogue = false;
+            }
+            else if (TreeDialogue == true)
+            {
+                SM.ChangeScene("Lvl4");
+                TreeDialogue = false;
+            } else if (GoodbyeDialogue == true)
+            {
+                GoodbyeDialogue = false;
             }
         }
     }
@@ -80,6 +97,15 @@ public class Dialogue : MonoBehaviour
         if (dialogue == "MoonDialogue")
         {
             MoonDialogue = true;
+        } else if (dialogue == "GrassDialogue")
+        {
+            GrassDialogue = true;
+        } else if (dialogue == "TreeDialogue")
+        {
+            TreeDialogue = true;
+        } else if (dialogue == "GoodbyeDialogue")
+        {
+            GoodbyeDialogue= true;
         }
         lines = sentences;
         StartDialogue();
