@@ -31,7 +31,7 @@ public class CameraFollow : MonoBehaviour
         //onGround = false;
         //}
         if (target.position.y > 10f && target.position.x > 26f) {
-            Vector3 newPos = new Vector3(30f, 14f, -10f);
+            Vector3 newPos = new Vector3(30f, 12f, -10f);
             transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
         } else {
             Vector3 newPos = new Vector3(target.position.x, (target.position.y + focusShift), -10f);

@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Trees
   - Water
   - UI
   - cats
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4282967445
+    locked: 0
+  - name: Trees
+    uniqueID: 3670508139
+    locked: 0
+  - name: Objects
+    uniqueID: 2821663765
     locked: 0
