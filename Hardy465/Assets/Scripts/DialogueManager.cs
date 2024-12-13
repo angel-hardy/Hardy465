@@ -87,6 +87,7 @@ public class Dialogue : MonoBehaviour
             } else if (GoodbyeDialogue == true)
             {
                 GoodbyeDialogue = false;
+                SM.ChangeScene("Credits");
             }
         }
     }
